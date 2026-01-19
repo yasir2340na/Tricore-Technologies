@@ -1,0 +1,11 @@
+# TriCore Technologies Portfolio
+
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://tricoretechnologies.vercel.app/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

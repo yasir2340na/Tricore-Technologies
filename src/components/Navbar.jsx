@@ -123,11 +123,6 @@ const Navbar = () => {
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
-                className={`block py-3 text-lg font-medium transition-colors ${
-                  isActive(item.href)
-                    ? 'text-primary font-bold pl-4 border-l-4 border-primary'
-                    : 'text-gray-300 hover:text-primary-400 hover:pl-4'
-                }`}
             className="lg:hidden mt-4 glass rounded-2xl p-6"
           >
             {navItems.map((item) => (
@@ -135,14 +130,20 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block py-3 text-gray-300 hover:text-primary-400 transition-colors border-b border-white/5 last:border-0"
+                className={`block py-3 text-lg font-medium transition-colors border-b border-white/5 last:border-0 ${
+                  isActive(item.href)
+                    ? 'text-primary font-bold pl-4 border-l-4 border-primary'
+                    : 'text-gray-300 hover:text-primary-400 hover:pl-4'
+                }`}
               >
                 {item.name}
               </a>
             ))}
-            <button className="w-full mt-4 px-6 py-3 bg-gradient-primary text-white font-semibold rounded-full">
-              Get Started
-            </button>
+            <a href="#contact" className="block">
+              <button className="w-full mt-4 px-6 py-3 bg-gradient-primary text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all">
+                Hire Us
+              </button>
+            </a>
           </motion.div>
         )}
       </div>
