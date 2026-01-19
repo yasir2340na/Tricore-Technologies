@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from './modules/Home'
 import About from './modules/About'
+import Services from './modules/Services'
 import Navbar from './components/Navbar'
 import ParticleBackground from './components/ParticleBackground'
 
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Home />
       <About />
+      <Services />
     </div>
   )
 }
