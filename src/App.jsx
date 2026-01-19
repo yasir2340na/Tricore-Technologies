@@ -1,5 +1,6 @@
 import React from 'react'
 import Home from './modules/Home'
+import About from './modules/About'
 import Navbar from './components/Navbar'
 import ParticleBackground from './components/ParticleBackground'
 
@@ -9,6 +10,7 @@ function App() {
       <ParticleBackground />
       <Navbar />
       <Home />
+      <About />
     </div>
   )
 }
