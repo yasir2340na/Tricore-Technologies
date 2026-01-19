@@ -2,6 +2,8 @@ import React from 'react'
 import Home from './modules/Home'
 import About from './modules/About'
 import Services from './modules/Services'
+import Team from './modules/Team'
+import Portfolio from './modules/Portfolio'
 import Navbar from './components/Navbar'
 import ParticleBackground from './components/ParticleBackground'
 
@@ -13,6 +15,8 @@ function App() {
       <Home />
       <About />
       <Services />
+      <Portfolio />
+      <Team />
     </div>
   )
 }
