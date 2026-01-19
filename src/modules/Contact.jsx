@@ -285,16 +285,23 @@ const Contact = () => {
             No pressure, no sales pitch—just an honest conversation about what's possible.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="mailto:tricoretechnologies3@gmail.com" className="inline-block">
-              <Button variant="primary" size="large">
-                Email Us Directly
-              </Button>
+            <a 
+              href="mailto:tricoretechnologies3@gmail.com" 
+              className="px-8 py-3 bg-gradient-to-r from-primary to-accent-purple rounded-lg font-semibold hover:scale-105 transition-all duration-300 text-white cursor-pointer"
+              onClick={(e) => {
+                window.location.href = 'mailto:tricoretechnologies3@gmail.com'
+              }}
+            >
+              Email Us Directly
             </a>
-            <a href="https://wa.me/923403170885" target="_blank" rel="noopener noreferrer" className="inline-block">
-              <Button variant="secondary" size="large">
-                <FaWhatsapp className="w-5 h-5" />
-                WhatsApp Chat
-              </Button>
+            <a 
+              href="https://wa.me/923403170885" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="px-8 py-3 glass rounded-lg font-semibold hover:scale-105 transition-all duration-300 text-white flex items-center gap-2 cursor-pointer"
+            >
+              <FaWhatsapp className="w-5 h-5" />
+              WhatsApp Chat
             </a>
           </div>
         </Card>

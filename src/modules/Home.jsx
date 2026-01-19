@@ -128,12 +128,16 @@ const Home = () => {
             variants={itemVariants}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
           >
-            <Button size="lg" icon={HiSparkles}>
-              Hire Us
-            </Button>
-            <Button variant="secondary" size="lg" icon={HiArrowRight}>
-              View Our Work
-            </Button>
+            <a href="#contact">
+              <Button size="lg" icon={HiSparkles}>
+                Hire Us
+              </Button>
+            </a>
+            <a href="#portfolio">
+              <Button variant="secondary" size="lg" icon={HiArrowRight}>
+                View Our Work
+              </Button>
+            </a>
           </motion.div>
 
           {/* Trust Indicators */}

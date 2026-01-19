@@ -11,12 +11,18 @@ import {
 import { FaGithub } from 'react-icons/fa'
 import Card from '../components/Card'
 
+// Import team images
+import khalidImage from '../team pictures/khalid hussain.jpg'
+import yasirImage from '../team pictures/yasir ali.jpg'
+import waseemImage from '../team pictures/waseem mazari.png'
+
 const Team = () => {
   const teamMembers = [
     {
       name: "Khalid Hussain",
       role: "Founder / Lead Developer",
       title: "Technical architecture & delivery",
+      image: khalidImage,
       skills: [
         { icon: HiCode, name: "Web Development" },
         { icon: HiDeviceMobile, name: "Mobile Apps" },
@@ -30,6 +36,7 @@ const Team = () => {
       name: "Yasir Ali",
       role: "Manager / AI Engineer",
       title: "AI strategy & project management",
+      image: yasirImage,
       skills: [
         { icon: HiChip, name: "AI & Machine Learning" },
         { icon: HiCube, name: "Deep Learning" },
@@ -43,6 +50,7 @@ const Team = () => {
       name: "Waseem",
       role: "Full-Stack Developer / Manager",
       title: "System reliability & performance",
+      image: waseemImage,
       skills: [
         { icon: HiCode, name: "Python & Java" },
         { icon: HiDatabase, name: "Backend Systems" },
@@ -107,9 +115,26 @@ const Team = () => {
             className="flex"
           >
             <Card className="p-6 flex flex-col h-full hover:scale-105 transition-all duration-300 group">
-              {/* Avatar Placeholder */}
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary via-accent-purple to-accent-pink flex items-center justify-center text-4xl font-bold">
-                {member.name.split(' ').map(n => n[0]).join('')}
+              {/* Team Member Photo with Decorative Frame */}
+              <div className="relative w-40 h-40 mx-auto mb-6">
+                {/* Decorative gradient border ring */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary via-accent-purple to-accent-pink p-1 animate-pulse">
+                  <div className="w-full h-full rounded-full bg-dark-900"></div>
+                </div>
+                
+                {/* Main image container with gradient border */}
+                <div className="absolute inset-0 rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-br from-primary via-accent-purple to-accent-pink p-1 group-hover:scale-105 transition-transform duration-300">
+                  <div className="w-full h-full rounded-full overflow-hidden bg-dark-900">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-full h-full object-cover scale-110 group-hover:scale-125 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
+                
+                {/* Glow effect on hover */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-accent-purple/30 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300"></div>
               </div>
 
               {/* Name & Role */}

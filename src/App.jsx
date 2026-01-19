@@ -5,6 +5,7 @@ import Services from './modules/Services'
 import Portfolio from './modules/Portfolio'
 import Technologies from './modules/Technologies'
 import Team from './modules/Team'
+import Testimonials from './modules/Testimonials'
 import Contact from './modules/Contact'
 import Navbar from './components/Navbar'
 import ParticleBackground from './components/ParticleBackground'
@@ -20,6 +21,7 @@ function App() {
       <Portfolio />
       <Technologies />
       <Team />
+      <Testimonials />
       <Contact />
     </div>
   )
