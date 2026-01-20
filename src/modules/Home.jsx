@@ -14,6 +14,7 @@ import {
 } from 'react-icons/hi'
 import Button from '../components/Button'
 import Card from '../components/Card'
+import AnimatedCounter from '../components/AnimatedCounter'
 
 const Home = () => {
   const highlights = [
@@ -44,10 +45,10 @@ const Home = () => {
   ]
 
   const stats = [
-    { icon: HiUserGroup, value: '3+', label: 'Core Engineers' },
-    { icon: HiSparkles, value: '50+', label: 'Projects Delivered' },
-    { icon: HiTrendingUp, value: '100%', label: 'Client Satisfaction' },
-    { icon: HiShieldCheck, value: '24/7', label: 'Support Available' }
+    { icon: HiUserGroup, value: 3, suffix: '+', label: 'Core Engineers' },
+    { icon: HiSparkles, value: 50, suffix: '+', label: 'Projects Delivered' },
+    { icon: HiTrendingUp, value: 100, suffix: '%', label: 'Client Satisfaction' },
+    { icon: HiShieldCheck, value: 24, suffix: '/7', label: 'Support Available' }
   ]
 
   const trustIndicators = [
@@ -196,7 +197,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">
-                  {stat.value}
+                  <AnimatedCounter end={stat.value} suffix={stat.suffix} duration={2000} />
                 </div>
                 <div className="text-gray-400 text-sm font-medium">
                   {stat.label}
